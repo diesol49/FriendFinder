@@ -1,8 +1,7 @@
 const path = require("path")
 
-module.exports = function(app) {
+module.exports = function(app, path) {
     app.get("/", function(req, res) {
-        res.sendStatus(200);
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 
@@ -10,7 +9,7 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    app.get("*", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
-    });
-}
+//     app.get("*", function(req, res) {
+//         res.sendFile(path.join(__dirname, "../public/home.html"));
+//     });
+};
