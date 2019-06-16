@@ -9,7 +9,7 @@
 let friendsList = [{
     name: "Thor",
     photo: "https://images.app.goo.gl/TxGwFxen5LRNvBBD6",
-    scores: [5, 1, 1, 4, 3, 4, 2, 1, 5, 4]
+    scores: ["5", "1", "1", "4", "3", "4", "2", "1", "5", "4"]
 },
 {
     name: "Hulk",
