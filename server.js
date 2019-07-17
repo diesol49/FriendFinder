@@ -7,11 +7,10 @@ const bodyParser = require("body-parser")
 const app = express()
 const PORT = process.env.PORT || 8000;
 
+app.use(express.static("app"));
 // THIS IS THE TEMPLATE WERE GIVEN IN ORDER TO COMMUNICATE WITH EXPRESS
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.text());
-app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 //CODE BELOW HAS THE SERVER POINT TO OUR ROUTE FILES
 require("./app/routing/apiRoutes.js")(app);
